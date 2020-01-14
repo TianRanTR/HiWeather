@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/rect_rounded_left_right_arc"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="320dp">
+
+    <LinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <TextView
+            android:id="@+id/realtime_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="24"
+            android:gravity="right"
+            android:textSize="60sp"
+            android:textColor="@color/textColor" />
+
+        <LinearLayout
+            android:id="@+id/centerright_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="℃"
+                android:textSize="24sp"
+                android:textColor="@color/textColor"
+                />
+            <TextView
+                android:id="@+id/realtime_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多云(实时)"
+                android:textSize="24sp"
+                android:textColor="@color/textColor"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/weather_img"
+        android:layout_width="12mm"
+        android:layout_height="12mm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/center_layout"
+        android:src="@drawable/zhenyu"
+        />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="XXXX-XX-XX XX:XX:XX"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weather_img"
+        />
+
+    <TextView
+        android:id="@+id/day_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16~20℃"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/center_layout"
+        />
+
+    <TextView
+        android:id="@+id/day_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="晴转多云"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/day_temperature"
+        />
+
+    <TextView
+        android:id="@+id/windpower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="西风4-3级"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/day_weather"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

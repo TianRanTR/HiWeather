@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">天气预报界面</string>
+    <string name="realtime_weather">%s(实时)</string>
+    <string name="day_temperature">%1$s~%2$s℃</string>
+    <string name="windpower">%1$s%2$s级</string>
+    <string name="day_weather">%1$s转%2$s</string>
+    <string name="city_name_now">当前城市：%s</string>
+</resources>
